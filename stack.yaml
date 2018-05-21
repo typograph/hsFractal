@@ -1,0 +1,6 @@
+flags: {}
+packages:
+- .
+extra-deps:
+- ncurses-0.2.16
+resolver: lts-11.10

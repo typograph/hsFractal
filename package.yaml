@@ -1,0 +1,42 @@
+name:                hsFractal
+version:             0.1.0.0
+github:              "typograph/hsFractal"
+license:             GPL3
+author:              "Tim Fuchs"
+maintainer:          "typograph@elec.ru"
+copyright:           "2018 Tim Fuchs"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         ASCII fractal browser written in Haskell
+
+dependencies:
+- base >= 4.7 && < 5
+- ncurses >= 0.2
+- JuicyPixels >= 1.3
+
+executables:
+  ASCIIBrowser:
+    main:                ASCIIBrowser.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+  pearl:
+    main:                pearl.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
+tests: null

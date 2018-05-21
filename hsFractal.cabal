@@ -1,0 +1,45 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6f48e3b11e65ba87450b5cdcb07aa6aba8a109dc479069e7318d00a950222b85
+
+name:           hsFractal
+version:        0.1.0.0
+description:    ASCII fractal browser written in Haskell
+homepage:       https://github.com/typograph/hsFractal#readme
+bug-reports:    https://github.com/typograph/hsFractal/issues
+author:         Tim Fuchs
+maintainer:     typograph@elec.ru
+copyright:      2018 Tim Fuchs
+license:        GPL3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/typograph/hsFractal
+
+executable ASCIIBrowser
+  main-is: ASCIIBrowser.hs
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      JuicyPixels >=1.3
+    , base >=4.7 && <5
+    , ncurses >=0.2
+  default-language: Haskell2010
+
+executable pearl
+  main-is: pearl.hs
+  hs-source-dirs:
+      src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
